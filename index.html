@@ -26,8 +26,17 @@
       <nav>
         <div class="logo"><a href="#">My Logo</a></div>
 
-        <i class="fa fa-bars" aria-hidden="true"></i>
-        <div class="nav-links">
+        <i class="fa fa-bars menu" aria-hidden="true"></i>
+
+        <div class="nav-links mobile">
+          <div class="close"><img src="./images/Icon@2x.svg" alt="" /></div>
+
+          <a id="work" href="#works">Portfolio</a>
+          <a id="about" href="#abouts">About</a>
+          <a id="contact" href="#contacts">Contact</a>
+        </div>
+
+        <div class="nav-links desktop">
           <a href="#">portfolio</a>
           <a href="#">about</a>
           <a href="#">contact</a>
@@ -65,7 +74,7 @@
       </div>
     </section>
 
-    <section class="works">
+    <section id="works" class="works">
       <div class="tonic">
         <div class="mobile">
           <img src="images/Snapshoot Portfolio.png" alt="" />
@@ -178,7 +187,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section id="abouts" class="about">
       <div class="left">
         <h3>About Myself</h3>
         <p class="description">
@@ -189,6 +198,7 @@
         </p>
 
         <p class="connect">LET'S CONNECT</p>
+
         <ul class="icons">
           <li>
             <a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -248,7 +258,7 @@
       </ul>
     </section>
 
-    <section class="contact">
+    <section id="contacts" class="contact">
       <div class="check">
         <h4>contact me</h4>
         <p>
@@ -292,5 +302,6 @@
         </form>
       </div>
     </section>
+    <script src="./script.js"></script>
   </body>
 </html>
