@@ -69,7 +69,7 @@ nav {
   height: 100vh;
 }
 
-.nav-links.mobile a {
+.nav-links.mobile .links {
   color: white;
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -139,7 +139,7 @@ h3 {
   color: #7f8cff;
 }
 
-.connect a {
+.connect a.connected {
   color: #7f8cff;
 }
 
@@ -148,7 +148,7 @@ h3 {
   gap: 0.66rem;
 }
 
-.icons a {
+.icons .link {
   color: #505f79;
   font-size: 1.066rem;
   font-size: 1.5rem;
