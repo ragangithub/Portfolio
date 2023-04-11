@@ -1,29 +1,29 @@
-const menu = document.querySelector('.menu');
-const closee = document.querySelector('.close');
-const navLinks = document.querySelector('.nav-links');
+const menu = document.querySelector(".menu");
+const closee = document.querySelector(".cancel");
+const navLinks = document.querySelector(".nav-links");
 
-menu.addEventListener('click', () => {
-  navLinks.style.display = 'flex';
-  closee.style.display = 'block';
+menu.addEventListener("click", () => {
+  navLinks.style.display = "flex";
+  closee.style.display = "block";
 });
-closee.addEventListener('click', () => {
-  navLinks.style.display = 'none';
-  closee.style.display = 'none';
+closee.addEventListener("click", () => {
+  navLinks.style.display = "none";
+  closee.style.display = "none";
 });
 
-document.addEventListener('click', (e) => {
-  const target1 = e.target.closest('#work');
-  const target2 = e.target.closest('#about');
-  const target3 = e.target.closest('#contact');
+document.addEventListener("click", (e) => {
+  const target1 = e.target.closest("#work");
+  const target2 = e.target.closest("#about");
+  const target3 = e.target.closest("#contact");
   if (target1 || target2 || target3) {
-    navLinks.style.display = 'none';
+    navLinks.style.display = "none";
   }
 });
 
-
 const works = document.querySelector(".works");
 
-const header = document.querySelector(".header");
+const overlay = document.querySelector(".overlay");
+
 const projects = [
   {
     image_mobile: "./images/Snapshoot-Portfolio.png",
@@ -75,6 +75,7 @@ const projects = [
     source: "https://github.com/ragangithub/Microverse-Portfolio",
   },
 ];
+
 projects.forEach((project, index) => {
   const divv = document.createElement("div");
 
@@ -111,6 +112,7 @@ projects.forEach((project, index) => {
 
   works.appendChild(divv);
 });
+
 const boddy = document.querySelector("body");
 
 document.addEventListener("click", (e) => {
@@ -215,17 +217,13 @@ document.addEventListener("click", (e) => {
   </div>
 </div>
 `;
-    boddy.style.backgroundColor = "#C1C7D0";
 
-    boddy.style.position = "fixed";
-
-    header.style.display = "none";
-    header.style.backgroundColor = "#C1C7D0";
-
+    boddy.style.position = "relative";
     popup.classList.add("show");
     popup.classList.add("tonic");
     popup.classList.add("pop");
     popup.classList.remove("hide");
+    overlay.classList.remove("hidden");
     boddy.append(popup);
   }
 });
@@ -236,11 +234,6 @@ document.addEventListener("click", (e) => {
 
   if (target) {
     popup.remove();
-
-    boddy.style.position = "static";
-
-    boddy.style.backgroundColor = "#e5e5e5";
-    header.style.display = "block";
-    header.style.backgroundColor = "#ffffff";
+    overlay.classList.add("hidden");
   }
 });
