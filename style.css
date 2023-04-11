@@ -385,6 +385,7 @@ section.works .tonic .desktop {
 .pop.tonic .right.mobile .see .host img {
   width: 18px;
   height: 18px;
+  margin-bottom: 0;
 }
 
 .pop.tonic .right.mobile .see {
@@ -401,10 +402,6 @@ section.works .tonic .desktop {
   align-items: center;
   padding: 2.5px 10px;
   margin-right: 10px;
-}
-
-.pop.tonic .right.mobile .see .host img {
-  margin-bottom: 0;
 }
 
 .pop .right.desktop {

@@ -1,88 +1,88 @@
-const menu = document.querySelector(".menu");
-const closee = document.querySelector(".cancel");
-const navLinks = document.querySelector(".nav-links");
+const menu = document.querySelector('.menu');
+const closee = document.querySelector('.cancel');
+const navLinks = document.querySelector('.nav-links');
 
-menu.addEventListener("click", () => {
-  navLinks.style.display = "flex";
-  closee.style.display = "block";
+menu.addEventListener('click', () => {
+  navLinks.style.display = 'flex';
+  closee.style.display = 'block';
 });
-closee.addEventListener("click", () => {
-  navLinks.style.display = "none";
-  closee.style.display = "none";
+closee.addEventListener('click', () => {
+  navLinks.style.display = 'none';
+  closee.style.display = 'none';
 });
 
-document.addEventListener("click", (e) => {
-  const target1 = e.target.closest("#work");
-  const target2 = e.target.closest("#about");
-  const target3 = e.target.closest("#contact");
+document.addEventListener('click', (e) => {
+  const target1 = e.target.closest('#work');
+  const target2 = e.target.closest('#about');
+  const target3 = e.target.closest('#contact');
   if (target1 || target2 || target3) {
-    navLinks.style.display = "none";
+    navLinks.style.display = 'none';
   }
 });
 
-const works = document.querySelector(".works");
+const works = document.querySelector('.works');
 
-const overlay = document.querySelector(".overlay");
+const overlay = document.querySelector('.overlay');
 
 const projects = [
   {
-    image_mobile: "./images/Snapshoot-Portfolio.png",
-    image_desktop: "./images/nature.png",
-    name: "Tonic",
+    image_mobile: './images/Snapshoot-Portfolio.png',
+    image_desktop: './images/nature.png',
+    name: 'Tonic',
     description:
-      " A daily selection of privately personalized reads; no accounts or sign-ups required.",
+      ' A daily selection of privately personalized reads; no accounts or sign-ups required.',
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
 
-    live: "https://ragangithub.github.io/",
-    source: "https://github.com/ragangithub/Microverse-Portfolio",
+    live: 'https://ragangithub.github.io/',
+    source: 'https://github.com/ragangithub/Microverse-Portfolio',
   },
   {
-    image_mobile: "./images/Availablity.png",
-    image_desktop: "./images/proffesional.png",
-    name: " Multi-Post Stories",
+    image_mobile: './images/Availablity.png',
+    image_desktop: './images/proffesional.png',
+    name: ' Multi-Post Stories',
     description:
-      " A daily selection of privately personalized reads; no accounts or sign-ups required.",
+      ' A daily selection of privately personalized reads; no accounts or sign-ups required.',
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
 
-    live: "https://ragangithub.github.io/",
-    source: "https://github.com/ragangithub/Microverse-Portfolio",
+    live: 'https://ragangithub.github.io/',
+    source: 'https://github.com/ragangithub/Microverse-Portfolio',
   },
   {
-    image_mobile: "./images/flex.png",
-    image_desktop: "./images/Snapshoot-Portfolio.png",
-    name: "Tonic",
+    image_mobile: './images/flex.png',
+    image_desktop: './images/Snapshoot-Portfolio.png',
+    name: 'Tonic',
     description:
-      "A daily selection of privately personalized reads; no accounts or sign-ups required.",
+      'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
 
-    live: "https://ragangithub.github.io/",
-    source: "https://github.com/ragangithub/Microverse-Portfolio",
+    live: 'https://ragangithub.github.io/',
+    source: 'https://github.com/ragangithub/Microverse-Portfolio',
   },
   {
-    image_mobile: "./images/proffesional.png",
-    image_desktop: "./images/Availablity.png",
-    name: " Multi-Post Stories",
+    image_mobile: './images/proffesional.png',
+    image_desktop: './images/Availablity.png',
+    name: ' Multi-Post Stories',
     description:
-      " A daily selection of privately personalized reads; no accounts or sign-ups required.",
+      ' A daily selection of privately personalized reads; no accounts or sign-ups required.',
 
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
 
-    live: "https://ragangithub.github.io/",
-    source: "https://github.com/ragangithub/Microverse-Portfolio",
+    live: 'https://ragangithub.github.io/',
+    source: 'https://github.com/ragangithub/Microverse-Portfolio',
   },
 ];
 
 projects.forEach((project, index) => {
-  const divv = document.createElement("div");
+  const divv = document.createElement('div');
 
-  divv.className = "tonic";
+  divv.className = 'tonic';
   divv.id = index;
   if (index === 1 || index === 3) {
-    divv.classList.add("reverse");
+    divv.classList.add('reverse');
   }
   divv.innerHTML = `
   <div class="mobile">
@@ -113,19 +113,19 @@ projects.forEach((project, index) => {
   works.appendChild(divv);
 });
 
-const boddy = document.querySelector("body");
+const boddy = document.querySelector('body');
 
-document.addEventListener("click", (e) => {
-  const target = e.target.closest("#see-project");
+document.addEventListener('click', (e) => {
+  const target = e.target.closest('#see-project');
 
   if (target) {
     e.preventDefault();
 
     const idd = target.parentNode.parentNode.id;
 
-    const popup = document.createElement("div");
-    popup.className = "pop";
-    popup.classList.add("tonic");
+    const popup = document.createElement('div');
+    popup.className = 'pop';
+    popup.classList.add('tonic');
     popup.innerHTML = `
 
 <div class="right mobile">
@@ -218,22 +218,22 @@ document.addEventListener("click", (e) => {
 </div>
 `;
 
-    boddy.style.position = "relative";
-    popup.classList.add("show");
-    popup.classList.add("tonic");
-    popup.classList.add("pop");
-    popup.classList.remove("hide");
-    overlay.classList.remove("hidden");
+    boddy.style.position = 'relative';
+    popup.classList.add('show');
+    popup.classList.add('tonic');
+    popup.classList.add('pop');
+    popup.classList.remove('hide');
+    overlay.classList.remove('hidden');
     boddy.append(popup);
   }
 });
 
-document.addEventListener("click", (e) => {
-  const popup = document.querySelector(".pop");
-  const target = e.target.closest("#close_pop");
+document.addEventListener('click', (e) => {
+  const popup = document.querySelector('.pop');
+  const target = e.target.closest('#close_pop');
 
   if (target) {
     popup.remove();
-    overlay.classList.add("hidden");
+    overlay.classList.add('hidden');
   }
 });
