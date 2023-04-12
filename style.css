@@ -501,6 +501,18 @@ button:active {
   background-color: #2230d2;
 }
 
+/* now */
+form .error {
+  display: none;
+  color: red;
+  background-color: black;
+  padding: 5px;
+}
+
+form .error.show {
+  display: block;
+}
+
 @media screen and (min-width: 375px) {
   section.header {
     padding-top: 1.562rem;
