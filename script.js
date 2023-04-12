@@ -238,7 +238,6 @@ document.addEventListener('click', (e) => {
   }
 });
 
-
 // validate contact form
 
 const form = document.querySelector('form');
