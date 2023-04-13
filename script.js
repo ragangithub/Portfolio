@@ -261,24 +261,35 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-//localstorage
+// localstorage
 
-let x = {
-  name: "",
-  email: "",
-  text: "",
+const x = {
+  name: '',
+  email: '',
+  text: '',
 };
-let y = "";
-form.elements.user_name.addEventListener("change", () => {
+let y = '';
+function store() {
+  y = JSON.stringify(x);
+  localStorage.setItem('form', y);
+}
+form.elements.user_name.addEventListener('change', () => {
   x.name = form.elements.user_name.value;
   store();
 });
 
-form.elements.user_email.addEventListener("change", () => {
+form.elements.user_email.addEventListener('change', () => {
   x.email = form.elements.user_email.value;
   store();
 });
-form.elements.user_message.addEventListener("change", () => {
+form.elements.user_message.addEventListener('change', () => {
   x.text = form.elements.user_message.value;
   store();
 });
+
+if (localStorage.getItem('form')) {
+  const get = JSON.parse(localStorage.getItem('form'));
+  form.elements.user_name.value = get.name;
+  form.elements.user_email.value = get.email;
+  form.elements.user_message.value = get.text;
+}
