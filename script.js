@@ -260,3 +260,25 @@ form.addEventListener('submit', (e) => {
     error.appendChild(span);
   }
 });
+
+//localstorage
+
+let x = {
+  name: "",
+  email: "",
+  text: "",
+};
+let y = "";
+form.elements.user_name.addEventListener("change", () => {
+  x.name = form.elements.user_name.value;
+  store();
+});
+
+form.elements.user_email.addEventListener("change", () => {
+  x.email = form.elements.user_email.value;
+  store();
+});
+form.elements.user_message.addEventListener("change", () => {
+  x.text = form.elements.user_message.value;
+  store();
+});
