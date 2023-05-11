@@ -26,6 +26,19 @@ const overlay = document.querySelector('.overlay');
 
 const projects = [
   {
+    image_mobile: './images/Todo2.png',
+    image_desktop: './images/Todo2.png',
+    name: 'Todo',
+    description:
+      "Todo list project is a simple project that will enable users to manage their to-do's. Users can add, edit and delete. Built with JavaScript, HTML, CSS, Webpack.",
+    details:
+      " Todo list project is a simple project that will enable users to manage their to-do's. Users can add, edit and delete. Built with JavaScript, HTML, CSS, Webpack",
+
+    live: 'https://ragangithub.github.io/To-Do-list/',
+    source: 'https://github.com/ragangithub/To-Do-list',
+  },
+
+  {
     image_mobile: './images/Snapshoot-Portfolio.png',
     image_desktop: './images/nature.png',
     name: 'Tonic',
