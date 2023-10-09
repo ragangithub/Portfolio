@@ -23,6 +23,10 @@ ul {
   list-style-type: none;
 }
 
+.fa-solid {
+  cursor: pointer;
+}
+
 a:hover,
 .fa {
   cursor: pointer;
@@ -294,7 +298,8 @@ section.works .tonic .desktop {
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid #f7f7f9;
-  padding-bottom: 0.66rem;
+  padding-bottom: 0.2rem;
+  margin-bottom: 20px;
 }
 
 .about .modals li .lang span {
@@ -309,6 +314,7 @@ section.works .tonic .desktop {
 
 .about .modals li {
   padding: 10px;
+  margin-bottom: 10px;
 }
 
 .about .modals ul {
@@ -762,15 +768,11 @@ form .error.show {
   }
 
   section.about .modals .lang {
-    padding-bottom: 46px;
+    padding-bottom: 24px;
   }
 
   section.about .modals li .lang .spaned {
     color: #344563;
-  }
-
-  section.about .modals .lang.selected {
-    border-bottom: 0;
   }
 
   section.about .modals li .technologies {
