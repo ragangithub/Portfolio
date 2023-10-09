@@ -28,14 +28,29 @@ const projects = [
   {
     image_mobile: './images/Todo2.png',
     image_desktop: './images/Todo2.png',
-    name: 'Todo',
-    description:
-      "Todo list project is a simple project that will enable users to manage their to-do's. Users can add, edit and delete. Built with JavaScript, HTML, CSS, Webpack.",
+    name: 'ToDo List',
+    description: 'A simple to-do list app with CRUD operations',
+    techs: ['html', 'css', 'javascript', 'webpack'],
+    subtitles: ['MICROVERSE', 'Frontend', 2023],
     details:
       " Todo list project is a simple project that will enable users to manage their to-do's. Users can add, edit and delete. Built with JavaScript, HTML, CSS, Webpack",
 
     live: 'https://ragangithub.github.io/To-Do-list/',
     source: 'https://github.com/ragangithub/To-Do-list',
+  },
+
+  {
+    image_mobile: './images/spacetravel.png',
+    image_desktop: './images/spacetravel.png',
+    name: 'Space Travellers Hub',
+    description:
+      'A rocket and mission booking app built using React & Redux toolkit.',
+    details:
+      '  Space Travellers Hub app lets users book rockets and join missions to Mars. Built using React & Redux.',
+    techs: ['React', 'Redux', 'Redux-toolkit'],
+    subtitles: ['MICROVERSE', 'Frontend', 2023],
+    live: 'https://ragangithub.github.io/To-Do-list/',
+    source: 'https://github.com/ragangithub/space-travelers-hub',
   },
 
   {
@@ -46,7 +61,8 @@ const projects = [
       ' A daily selection of privately personalized reads; no accounts or sign-ups required.',
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-
+    techs: ['html', 'css', 'javascript', 'webpack'],
+    subtitles: ['MICROVERSE', 'Frontend', 2023],
     live: 'https://ragangithub.github.io/',
     source: 'https://github.com/ragangithub/Microverse-Portfolio',
   },
@@ -58,7 +74,8 @@ const projects = [
       ' A daily selection of privately personalized reads; no accounts or sign-ups required.',
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-
+    techs: ['html', 'css', 'javascript', 'webpack'],
+    subtitles: ['MICROVERSE', 'Frontend', 2023],
     live: 'https://ragangithub.github.io/',
     source: 'https://github.com/ragangithub/Microverse-Portfolio',
   },
@@ -70,7 +87,8 @@ const projects = [
       'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-
+    techs: ['html', 'css', 'javascript', 'webpack'],
+    subtitles: ['MICROVERSE', 'Frontend', 2023],
     live: 'https://ragangithub.github.io/',
     source: 'https://github.com/ragangithub/Microverse-Portfolio',
   },
@@ -83,7 +101,8 @@ const projects = [
 
     details:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-
+    techs: ['html', 'css', 'javascript', 'webpack'],
+    subtitles: ['MICROVERSE', 'Frontend', 2023],
     live: 'https://ragangithub.github.io/',
     source: 'https://github.com/ragangithub/Microverse-Portfolio',
   },
@@ -105,19 +124,18 @@ projects.forEach((project, index) => {
   <div class="right">
     <h2>${project.name}</h2>
     <div class="back">
-      <div>CANOPY</div>
+      <div>${project.subtitles[0]}</div>
       <div class="circle"></div>
-      <div>Back End Dev</div>
+      <div>${project.subtitles[1]}</div>
       <div class="circle"></div>
-      <div>2015</div>
+      <div>${project.subtitles[2]}</div>
     </div>
     <p>
     ${project.description}
     </p>
     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
+  
+    ${project.techs.map((tech) => `<li>${tech}</li>`).join('')}
     </ul>
     <div id='see-project'><a href="">See Project</a></div>
   </div>
@@ -149,20 +167,18 @@ document.addEventListener('click', (e) => {
    
   </div>
   <div class="back">
-    <div>CANOPY</div>
+    <div>${projects[idd].subtitles[0]}</div>
     <div class="circle"></div>
-    <div>Back End Dev</div>
+    <div>${projects[idd].subtitles[1]}</div>
     <div class="circle"></div>
-    <div>2015</div>
+    <div>${projects[idd].subtitles[2]}</div>
   </div>
   <div class="mobile"><img src=${projects[idd].image_mobile} alt="" /></div>
   <p>
   ${projects[idd].details}
   </p>
   <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
+  ${projects[idd].techs.map((tech) => `<li>${tech}</li>`).join('')}
   </ul>
   <div class="see">
    <a class='host' href=${projects[idd].live}>
@@ -187,13 +203,15 @@ document.addEventListener('click', (e) => {
    
   </div>
   <div class="back">
-    <div>CANOPY</div>
-    <div class="circle"></div>
-    <div>Back End Dev</div>
-    <div class="circle"></div>
-    <div>2015</div>
-  </div>
-  <div class="desktop-image"><img src=${projects[idd].image_desktop} alt="" /></div>
+  <div>${projects[idd].subtitles[0]}</div>
+  <div class="circle"></div>
+  <div>${projects[idd].subtitles[1]}</div>
+  <div class="circle"></div>
+  <div>${projects[idd].subtitles[2]}</div>
+</div>
+  <div class="desktop-image"><img src=${
+  projects[idd].image_desktop
+} alt="" /></div>
 
 
   <div class=details>
@@ -205,17 +223,8 @@ document.addEventListener('click', (e) => {
   </div>
   <div class='right'>
   <ul >
-  
-     <li>HTML</li>
-     <li>CSS</li>
-     <li>JavaScript</li>
-   
+${projects[idd].techs.map((tech) => `<li>${tech}</li>`).join('')}
   </ul>
-
-  <ul class='ruby' >
-  <li>Ruby</li>
-  <li>Bootstrap</li>
- </ul>
   <div class="see">
   <a class='host' href=${projects[idd].live}>
     <span>see live</span>
@@ -239,6 +248,44 @@ document.addEventListener('click', (e) => {
     overlay.classList.remove('hidden');
     boddy.append(popup);
   }
+});
+
+// about
+const arrowRightOnes = document.querySelectorAll('.arrow1');
+const arrowDownOnes = document.querySelectorAll('.arrow2');
+const technologies = document.querySelectorAll('.technologies');
+technologies.forEach((tech, index) => {
+  if (index === 0) {
+    tech.style.display = 'flex';
+    arrowDownOnes[index].classList.remove('hidden');
+    arrowRightOnes[index].classList.add('hidden');
+  } else {
+    tech.style.display = 'none';
+  }
+});
+
+arrowRightOnes.forEach((arrowRightOne, index) => {
+  arrowRightOne.addEventListener('click', () => {
+    arrowDownOnes[index].classList.remove('hidden');
+    arrowRightOnes[index].classList.add('hidden');
+    technologies[index].style.display = 'flex';
+
+    arrowRightOnes.forEach((arrow, i) => {
+      if (i !== index) {
+        technologies[i].style.display = 'none';
+        arrowDownOnes[i].classList.add('hidden');
+        arrowRightOnes[i].classList.remove('hidden');
+      }
+    });
+  });
+});
+
+arrowDownOnes.forEach((arrowDownOne, index) => {
+  arrowDownOne.addEventListener('click', () => {
+    technologies[index].style.display = 'none';
+    arrowRightOnes[index].classList.remove('hidden');
+    arrowDownOnes[index].classList.add('hidden');
+  });
 });
 
 document.addEventListener('click', (e) => {
