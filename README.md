@@ -69,7 +69,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> see project live https://ragangithub.github.io/
+> see project live https://ragangithub.github.io/Portfolio/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
