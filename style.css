@@ -331,6 +331,21 @@ section.works .tonic .desktop {
   gap: 0.66rem;
 }
 
+section.about .modals li .technologies li {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section.about .modals li .technologies li p {
+  text-align: center;
+}
+
+section.about .modals li .technologies li img {
+  width: 50px;
+  height: 50px;
+}
+
 /* now */
 .overlay {
   position: fixed;
@@ -777,6 +792,11 @@ form .error.show {
 
   section.about .modals li .technologies {
     flex-direction: row;
+  }
+
+  section.about .modals li ul.technologies li img.img {
+    width: 80px;
+    height: 80px;
   }
 
   /* CONTACT SECTION */

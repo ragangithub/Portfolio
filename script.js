@@ -26,6 +26,19 @@ const overlay = document.querySelector('.overlay');
 
 const projects = [
   {
+    image_mobile: './images/doctorc.png',
+    image_desktop: './images/doctorc.png',
+    name: ' Doctor&apos;s Appointment',
+    description:
+      ' A convenient online platform for scheduling appointments with doctors.',
+    details:
+      'Built by following a website design on Behance, this website streamlines the patient-doctor appointment process. Built using React & Ruby on Rails.',
+    techs: ['react', 'ruby on rails', 'remote collaboration'],
+    subtitles: ['MICROVERSE', 'Full-Stack', 2023],
+    live: 'https://ragangithub.github.io/',
+    source: 'https://github.com/ragangithub/Microverse-Portfolio',
+  },
+  {
     image_mobile: './images/Todo2.png',
     image_desktop: './images/Todo2.png',
     name: 'ToDo List',
@@ -38,7 +51,19 @@ const projects = [
     live: 'https://ragangithub.github.io/To-Do-list/',
     source: 'https://github.com/ragangithub/To-Do-list',
   },
-
+  {
+    image_mobile: './images/budget.png',
+    image_desktop: './images/budget.png',
+    name: 'Budget',
+    description:
+      ' Experience the sophistication of our Ruby on Rails-powered expense tracking application.',
+    details:
+      'This website was built based on a design from Behance, allowing users to track their expenses',
+    techs: ['Ruby', 'Ruby on Rails', 'CSS'],
+    subtitles: ['MICROVERSE', 'Full-Stack', 2023],
+    live: 'https://budget-kv71.onrender.com',
+    source: 'https://github.com/ragangithub/Budget_app',
+  },
   {
     image_mobile: './images/spacetravel.png',
     image_desktop: './images/spacetravel.png',
@@ -51,60 +76,6 @@ const projects = [
     subtitles: ['MICROVERSE', 'Frontend', 2023],
     live: 'https://ragangithub.github.io/To-Do-list/',
     source: 'https://github.com/ragangithub/space-travelers-hub',
-  },
-
-  {
-    image_mobile: './images/Snapshoot-Portfolio.png',
-    image_desktop: './images/nature.png',
-    name: 'Tonic',
-    description:
-      ' A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    details:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-    techs: ['html', 'css', 'javascript', 'webpack'],
-    subtitles: ['MICROVERSE', 'Frontend', 2023],
-    live: 'https://ragangithub.github.io/',
-    source: 'https://github.com/ragangithub/Microverse-Portfolio',
-  },
-  {
-    image_mobile: './images/Availablity.png',
-    image_desktop: './images/proffesional.png',
-    name: ' Multi-Post Stories',
-    description:
-      ' A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    details:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-    techs: ['html', 'css', 'javascript', 'webpack'],
-    subtitles: ['MICROVERSE', 'Frontend', 2023],
-    live: 'https://ragangithub.github.io/',
-    source: 'https://github.com/ragangithub/Microverse-Portfolio',
-  },
-  {
-    image_mobile: './images/flex.png',
-    image_desktop: './images/Snapshoot-Portfolio.png',
-    name: 'Tonic',
-    description:
-      'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    details:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-    techs: ['html', 'css', 'javascript', 'webpack'],
-    subtitles: ['MICROVERSE', 'Frontend', 2023],
-    live: 'https://ragangithub.github.io/',
-    source: 'https://github.com/ragangithub/Microverse-Portfolio',
-  },
-  {
-    image_mobile: './images/proffesional.png',
-    image_desktop: './images/Availablity.png',
-    name: ' Multi-Post Stories',
-    description:
-      ' A daily selection of privately personalized reads; no accounts or sign-ups required.',
-
-    details:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
-    techs: ['html', 'css', 'javascript', 'webpack'],
-    subtitles: ['MICROVERSE', 'Frontend', 2023],
-    live: 'https://ragangithub.github.io/',
-    source: 'https://github.com/ragangithub/Microverse-Portfolio',
   },
 ];
 
