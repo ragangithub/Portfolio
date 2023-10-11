@@ -43,10 +43,16 @@ section.header {
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.6rem;
+  padding: 10px 1.6rem;
   margin-bottom: 10px;
 }
 
@@ -226,6 +232,7 @@ section.works .tonic .desktop {
 .tonic ul {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .tonic ul li {
@@ -569,7 +576,7 @@ form .error.show {
   }
 
   nav {
-    padding: 0 4%;
+    padding: 1.5% 4%;
   }
 
   nav .menu {
@@ -580,6 +587,15 @@ form .error.show {
     display: flex;
     gap: 32px;
     gap: 2.133rem;
+  }
+
+  .nav-links.desktop a {
+    color: #344563;
+    font-size: 18px;
+  }
+
+  .nav-links.desktop a.desk:hover {
+    color: #6070ff;
   }
 
   .nav-links.mobile {
