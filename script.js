@@ -26,8 +26,8 @@ const overlay = document.querySelector('.overlay');
 
 const projects = [
   {
-    image_mobile: './images/doctorc.png',
-    image_desktop: './images/doctorc.png',
+    image_mobile: './images/marcelo-leal-6pcGTJDuf6M-unsplash.jpg',
+    image_desktop: './images/marcelo-leal-6pcGTJDuf6M-unsplash.jpg',
     name: ' Doctor&apos;s Appointment',
     description:
       ' A convenient online platform for scheduling appointments with doctors.',
@@ -35,12 +35,12 @@ const projects = [
       'Built by following a website design on Behance, this website streamlines the patient-doctor appointment process. Built using React & Ruby on Rails.',
     techs: ['react', 'ruby on rails', 'remote collaboration'],
     subtitles: ['MICROVERSE', 'Full-Stack', 2023],
-    live: 'https://ragangithub.github.io/',
-    source: 'https://github.com/ragangithub/Microverse-Portfolio',
+    live: 'https://doctor-appointment-3o4a.onrender.com/auth',
+    source: 'https://github.com/abel-tefera/doctor-appointment-front-end.git',
   },
   {
-    image_mobile: './images/Todo2.png',
-    image_desktop: './images/Todo2.png',
+    image_mobile: './images/glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg',
+    image_desktop: './images/glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg',
     name: 'ToDo List',
     description: 'A simple to-do list app with CRUD operations',
     techs: ['html', 'css', 'javascript', 'webpack'],
@@ -52,8 +52,8 @@ const projects = [
     source: 'https://github.com/ragangithub/To-Do-list',
   },
   {
-    image_mobile: './images/budget.png',
-    image_desktop: './images/budget.png',
+    image_mobile: './images/kelly-sikkema-3-Tc_5LROrM-unsplash.jpg',
+    image_desktop: './images/kelly-sikkema-3-Tc_5LROrM-unsplash.jpg',
     name: 'Budget',
     description:
       ' Experience the sophistication of our Ruby on Rails-powered expense tracking application.',
@@ -65,8 +65,8 @@ const projects = [
     source: 'https://github.com/ragangithub/Budget_app',
   },
   {
-    image_mobile: './images/spacetravel.png',
-    image_desktop: './images/spacetravel.png',
+    image_mobile: './images/brian-mcgowan-I0fDR8xtApA-unsplash.jpg',
+    image_desktop: './images/brian-mcgowan-I0fDR8xtApA-unsplash.jpg',
     name: 'Space Travellers Hub',
     description:
       'A rocket and mission booking app built using React & Redux toolkit.',
@@ -91,7 +91,7 @@ projects.forEach((project, index) => {
   <div class="mobile">
     <img src=${project.image_mobile} alt="" />
   </div>
-  <div class="desktop"><img src=${project.image_desktop} alt="" /></div>
+   <div class="desktop"><img src=${project.image_desktop} alt="" /></div>
   <div class="right">
     <h2>${project.name}</h2>
     <div class="back">
@@ -104,9 +104,8 @@ projects.forEach((project, index) => {
     <p>
     ${project.description}
     </p>
-    <ul>
-  
-    ${project.techs.map((tech) => `<li>${tech}</li>`).join('')}
+    <ul class='techs'>
+   ${project.techs.map((tech) => `<li>${tech}</li>`).join('')}
     </ul>
     <div id='see-project'><a href="">See Project</a></div>
   </div>
@@ -148,15 +147,15 @@ document.addEventListener('click', (e) => {
   <p>
   ${projects[idd].details}
   </p>
-  <ul>
+  <ul class='techs'>
   ${projects[idd].techs.map((tech) => `<li>${tech}</li>`).join('')}
   </ul>
   <div class="see">
-   <a class='host' href=${projects[idd].live}>
+   <a target="_blank" class='host' href=${projects[idd].live}>
     <span>see live</span>
     <img src="./images/live.svg"/>
    </a>
-   <a class='git'href=${projects[idd].source}>
+   <a target="_blank" class='git'href=${projects[idd].source}>
     <span>see source</span>
     <i class="fa fa-github" aria-hidden="true"></i>
    </a>
@@ -193,15 +192,15 @@ document.addEventListener('click', (e) => {
   </p>
   </div>
   <div class='right'>
-  <ul >
+  <ul class='techs'>
 ${projects[idd].techs.map((tech) => `<li>${tech}</li>`).join('')}
   </ul>
   <div class="see">
-  <a class='host' href=${projects[idd].live}>
+  <a class='host' href=${projects[idd].live} target="_blank" >
     <span>see live</span>
     <img src="./images/live.svg"/>
    </a>
-   <a class='git' href=${projects[idd].source}>
+   <a class='git' href=${projects[idd].source} target="_blank" >
     <span>see source</span>
     <i class="fa fa-github" aria-hidden="true"></i>
    </a>
