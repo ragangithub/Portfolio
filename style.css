@@ -269,6 +269,11 @@ section.works .tonic .desktop {
   gap: 1.66rem;
 }
 
+.strech {
+  object-fit: cover;
+  object-position: center center;
+}
+
 .about {
   background-color: white;
   margin-top: 15.2rem;

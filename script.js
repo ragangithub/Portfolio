@@ -89,9 +89,11 @@ projects.forEach((project, index) => {
   }
   divv.innerHTML = `
   <div class="mobile">
-    <img src=${project.image_mobile} alt="" />
+    <img class="strech" src=${project.image_mobile} alt="" />
   </div>
-   <div class="desktop"><img src=${project.image_desktop} alt="" /></div>
+   <div class="desktop"><img class="strech" src=${
+  project.image_desktop
+} alt="" /></div>
   <div class="right">
     <h2>${project.name}</h2>
     <div class="back">
@@ -143,7 +145,9 @@ document.addEventListener('click', (e) => {
     <div class="circle"></div>
     <div>${projects[idd].subtitles[2]}</div>
   </div>
-  <div class="mobile"><img src=${projects[idd].image_mobile} alt="" /></div>
+  <div class="mobile"><img class="strech" src=${
+  projects[idd].image_mobile
+} alt="" /></div>
   <p>
   ${projects[idd].details}
   </p>
@@ -179,7 +183,7 @@ document.addEventListener('click', (e) => {
   <div class="circle"></div>
   <div>${projects[idd].subtitles[2]}</div>
 </div>
-  <div class="desktop-image"><img src=${
+  <div class="desktop-image"><img class="strech" src=${
   projects[idd].image_desktop
 } alt="" /></div>
 
