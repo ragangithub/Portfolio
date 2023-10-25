@@ -37,7 +37,7 @@
 
 # 📖 Portfolio microverse project <a name="about-project"></a>
 
-> This is my first portfolio project. I created using HTML and CSS,and it is mobile responsive
+> This is my first portfolio project. I created using HTML and CSS,and it is mobile responsive.
 
 ## 🛠 Built With <a name="built-with"></a>
 
